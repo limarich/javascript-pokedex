@@ -5,7 +5,7 @@ const renderItems = () => {
 
   for (let i = 0; i < pokemonsArray.length; i++) {
     pokemonsList += `
-            <li class="item">
+            <li class="item" onClick={openModal()}>
             <img src="${pokemonsArray[i].sprites.front_default}" alt=${
       pokemonsArray[i].name
     } />

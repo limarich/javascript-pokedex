@@ -1,0 +1,64 @@
+.item.skeleton span,
+.info-container.skeleton .pokemon span,
+.info-container.skeleton .description,
+.info-container.skeleton .weaknesses-list li,
+.info-container.skeleton .advantages-list li,
+.info-container.skeleton .statistics-list li {
+  width: 100px;
+  height: 1.5rem;
+  border-radius: 8px;
+  background: var(--index-color);
+  position: relative;
+  overflow: hidden;
+}
+.item.skeleton span::before,
+.skeleton .rect::before,
+.info-container.skeleton .pokemon span::before,
+.info-container.skeleton .description::before,
+.info-container.skeleton .weaknesses-list li::before,
+.info-container.skeleton .advantages-list li::before,
+.info-container.skeleton .statistics-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #eeeeee2a;
+  animation: 1s loading infinite ease-in-out;
+  transform: translateX(-200%);
+}
+.skeleton .rect {
+  width: 100px;
+  height: 100px;
+  background: var(--index-color);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes loading {
+  0% {
+    transform: skew(-45deg) translateX(-200%);
+  }
+  100% {
+    transform: skew(-45deg) translateX(300%);
+  }
+}
+
+.info-container.skeleton img {
+  display: none;
+}
+.info-container.skeleton .pokemon span,
+.info-container.skeleton li span {
+  color: transparent;
+}
+
+.info-container.skeleton .weaknesses-list li,
+.info-container.skeleton .advantages-list li {
+  width: 60px;
+}
+.info-container.skeleton .description {
+  width: 100%;
+  height: 4rem;
+  color: transparent;
+}

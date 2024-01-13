@@ -21,7 +21,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1;
   background: var(--background-color);
 }
 
@@ -30,6 +30,7 @@ section {
   width: 100%;
   min-height: 100svh;
   padding: 1rem;
+  position: relative;
 }
 
 .logo {
@@ -48,77 +49,4 @@ section {
   all: unset;
   cursor: pointer;
   font-size: 1.5rem;
-}
-
-.pokemons-list,
-.loading-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 0.5rem;
-}
-.pokemons-list .item,
-.loading-list .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0.5rem;
-  gap: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 50px 0.5px var(--border-color);
-  background-color: var(--background-color);
-}
-
-.pokemons-list .item:hover {
-  background: var(--primary-color);
-  border: 1px solid blue;
-}
-
-.item img {
-  width: 100px;
-}
-.item .name {
-  font-size: 0.85rem;
-}
-
-.item .index {
-  font-size: 0.65rem;
-  color: var(--index-color);
-}
-
-.item.skeleton span {
-  width: 100px;
-  height: 1.5rem;
-  border-radius: 8px;
-  background: var(--index-color);
-  position: relative;
-  overflow: hidden;
-}
-.item.skeleton span::before,
-.item.skeleton .rect::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: #eeeeee2a;
-  animation: 1s loading infinite ease-in-out;
-  transform: translateX(-200%);
-}
-.item.skeleton .rect {
-  width: 100px;
-  height: 100px;
-  background: var(--index-color);
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-}
-@keyframes loading {
-  0% {
-    transform: skew(-45deg) translateX(-200%);
-  }
-  100% {
-    transform: skew(-45deg) translateX(300%);
-  }
 }
