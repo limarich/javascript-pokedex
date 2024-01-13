@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>My Pokedex</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/images/pokeball.png" alt="My Pokedex" />
+        <!-- Pokemon icons created by Nikita Golubev - Flaticon 
+        https://www.flaticon.com/free-icons/pokemon
+    -->
+        <h3>My pokedex</h3>
+      </div>
+      <button class="search-btn">
+        <i class="uil uil-search"></i>
+      </button>
+    </header>
+    <section>
+      <ul class="pokemons-list" id="pokemons-list"></ul>
+      <ul class="loading-list">
+        <li class="item">
+          <img src="./assets/images/pokeball.png" alt="carregando conteudo" />
+          <span></span>
+          <span></span>
+        </li>
+      </ul>
+    </section>
+  </body>
+  <script src="./assets/js/getPokedex.js"></script>
+  <script src="./assets/js/getPokemonData.js"></script>
+  <script src="./assets/js/renderItems.js"></script>
+  <script src="./assets/js/handleScroll.js"></script>
+  <script src="./assets/js/handleSavePokemons.js"></script>
+</html>
