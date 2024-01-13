@@ -1,5 +1,5 @@
 const BASE_URI = "https://pokeapi.co/api/v2/pokemon";
-let LIMIT = 10;
+let LIMIT = 80;
 
 let offset = 0;
 
@@ -11,11 +11,7 @@ const getPokedexData = async (limit = 10, offset = 0) => {
     await getPokemonData(pokedex);
   } catch (err) {
     console.error(err);
-    // ideia de adicionar um popup informando problema no get de dados
-  } finally {
-    // mostrar o loading
-    // ideia de implementar um skeleton de {limit} elementos enquanto carregam os novos dados
   }
 };
 
-// getPokedexData();
+getPokedexData(LIMIT, 0);

@@ -9,14 +9,14 @@ const handleScroll = async () => {
     isLoading = true;
     offset += LIMIT;
 
-    await getPokedexData(LIMIT, offset)
-      .then(() => {
-        isLoading = false;
-      })
-      .catch((error) => {
-        isLoading = false;
-        console.error(error);
-      });
+    try {
+      renderSkeletons();
+      await getPokedexData(LIMIT, offset);
+    } catch (err) {
+      console.error(error);
+    } finally {
+      isLoading = false;
+    }
   }
 };
 

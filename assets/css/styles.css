@@ -56,7 +56,8 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 0.5rem;
 }
-.pokemons-list .item {
+.pokemons-list .item,
+.loading-list .item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,5 +86,39 @@ section {
   color: var(--index-color);
 }
 
-.loading-list {
+.item.skeleton span {
+  width: 100px;
+  height: 1.5rem;
+  border-radius: 8px;
+  background: var(--index-color);
+  position: relative;
+  overflow: hidden;
+}
+.item.skeleton span::before,
+.item.skeleton .rect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #eeeeee2a;
+  animation: 1s loading infinite ease-in-out;
+  transform: translateX(-200%);
+}
+.item.skeleton .rect {
+  width: 100px;
+  height: 100px;
+  background: var(--index-color);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes loading {
+  0% {
+    transform: skew(-45deg) translateX(-200%);
+  }
+  100% {
+    transform: skew(-45deg) translateX(300%);
+  }
 }
