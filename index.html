@@ -40,110 +40,38 @@
         </button>
         <div class="info-container skeleton">
           <div class="pokemon">
-            <img src="./assets/images/pokeball.png" alt="" />
+            <div id="image"></div>
             <div class="rect"></div>
             <div class="pokemon-info">
-              <span class="index">#009</span>
-              <span class="name">Blastoise</span>
-              <span class="type">WATER</span>
+              <span class="index" id="index"></span>
+              <span class="name" id="name"></span>
+              <div class="types" id="types"></div>
             </div>
           </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            ut nihil accusantium corrupti unde sapiente incidunt, quaerat quia
-            praesentium. Quasi ratione nostrum ducimus distinctio incidunt ea ad
-            quisquam mollitia. Atque?
-          </p>
+          <p class="description" id="description"></p>
           <div class="statistics">
             <h3>Estatísticas</h3>
-            <ul class="statistics-list">
-              <li>
-                <span class="statistic-label">força: </span>
-                <span class="statistic-value">100</span>
-              </li>
-              <li>
-                <span class="statistic-label">força: </span>
-                <span class="statistic-value">100</span>
-              </li>
-              <li>
-                <span class="statistic-label">força: </span>
-                <span class="statistic-value">100</span>
-              </li>
-              <li>
-                <span class="statistic-label">força: </span>
-                <span class="statistic-value">100</span>
-              </li>
-              <li>
-                <span class="statistic-label">velocidade: </span>
-                <span class="statistic-value">50</span>
-              </li>
-              <li>
-                <span class="statistic-label">ataque: </span>
-                <span class="statistic-value">35</span>
-              </li>
-            </ul>
+            <ul class="statistics-list" id="statistics-list"></ul>
           </div>
           <div class="weaknesses">
             <h3>Fraquesas</h3>
-            <ul class="weaknesses-list">
-              <li>
-                <span class="statistic-label">WATER</span>
-              </li>
-              <li>
-                <span class="statistic-label">WATER</span>
-              </li>
-              <li>
-                <span class="statistic-label">WATER</span>
-              </li>
-            </ul>
+            <ul class="weaknesses-list" id="weaknesses-list"></ul>
           </div>
           <div class="advantages">
             <h3>Vantagens</h3>
-            <ul class="advantages-list">
-              <li>
-                <span class="statistic-label">WATER</span>
-              </li>
-              <li>
-                <span class="statistic-label">WATER</span>
-              </li>
-              <li>
-                <span class="statistic-label">WATER</span>
-              </li>
-            </ul>
+            <ul class="advantages-list" id="advantages-list"></ul>
           </div>
           <div class="evolution">
             <h3>Evoluções</h3>
-            <ul class="evolution-list">
-              <li class="pokemon">
-                <img src="./assets/images/pokeball.png" alt="" />
-                <div class="rect"></div>
-                <div class="pokemon-info">
-                  <span class="index">#009</span>
-                  <span class="name">Blastoise</span>
-                  <span class="type">WATER</span>
-                </li>
-              <li class="pokemon">
-                <img src="./assets/images/pokeball.png" alt="" />
-                <div class="rect"></div>
-                <div class="pokemon-info">
-                  <span class="index">#009</span>
-                  <span class="name">Blastoise</span>
-                  <span class="type">WATER</span>
-                </li>
-              <li class="pokemon">
-                <img src="./assets/images/pokeball.png" alt="" />
-                <div class="rect"></div>
-                <div class="pokemon-info">
-                  <span class="index">#009</span>
-                  <span class="name">Blastoise</span>
-                  <span class="type">WATER</span>
-                </li>
-            </ul>
+            <ul class="evolution-list" id="evolution-list"></ul>
           </div>
         </div>
       </div>
     </section>
   </body>
+  <script src="./assets/js/renderModal.js"></script>
+  <script src="./assets/js/processEvolutions.js"></script>
+  <script src="./assets/js/getEvolutionChain.js"></script>
   <script src="./assets/js/getPokedex.js"></script>
   <script src="./assets/js/getPokemonData.js"></script>
   <script src="./assets/js/renderItems.js"></script>
@@ -151,4 +79,7 @@
   <script src="./assets/js/handleSavePokemons.js"></script>
   <script src="./assets/js/renderLoadingSkeleton.js"></script>
   <script src="./assets/js/handleModal.js"></script>
+  <script src="./assets/js/getPokemonByIdOrName.js"></script>
+  <script src="./assets/js/getPokemonSpecies.js"></script>
+  <script src="./assets/js/getTypeData.js"></script>
 </html>

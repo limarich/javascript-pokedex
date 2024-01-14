@@ -5,7 +5,7 @@ const renderItems = () => {
 
   for (let i = 0; i < pokemonsArray.length; i++) {
     pokemonsList += `
-            <li class="item" onClick={openModal()}>
+            <li class="item" pokemon-id="${pokemonsArray[i].id}">
             <img src="${pokemonsArray[i].sprites.front_default}" alt=${
       pokemonsArray[i].name
     } />
@@ -20,4 +20,12 @@ const renderItems = () => {
   }
 
   list.innerHTML = pokemonsList;
+
+  const items = document.querySelectorAll(".item");
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      const pokemonId = item.getAttribute("pokemon-id");
+      openModal(pokemonId);
+    });
+  });
 };

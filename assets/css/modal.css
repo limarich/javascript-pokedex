@@ -30,6 +30,11 @@
   font-size: 0.8rem;
   color: var(--index-color);
 }
+.pokemon-info .types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
 .pokemon-info .type {
   background: #eee;
   padding: 0.25rem 0.5rem;
