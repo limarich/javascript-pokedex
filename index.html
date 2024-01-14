@@ -28,9 +28,12 @@
     -->
         <h3>My pokedex</h3>
       </div>
-      <button class="search-btn">
-        <i class="uil uil-search"></i>
-      </button>
+      <div class="search-container">
+        <input type="search" id="search-bar" class="search-bar" />
+        <button class="search-btn" onclick="handleSearch()">
+          <i class="uil uil-search"></i>
+        </button>
+      </div>
     </header>
     <section>
       <ul class="pokemons-list" id="pokemons-list"></ul>
@@ -70,6 +73,7 @@
     </section>
   </body>
   <script src="./assets/js/typeColors.js"></script>
+  <script src="./assets/js/handleSearch.js"></script>
   <script src="./assets/js/renderModal.js"></script>
   <script src="./assets/js/processEvolutions.js"></script>
   <script src="./assets/js/getEvolutionChain.js"></script>
