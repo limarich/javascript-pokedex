@@ -10,7 +10,12 @@ const evolutionList = document.querySelector("#evolution-list");
 
 const renderTypes = (types) => {
   return types
-    .map((type) => `<span class="type">${type.type.name}</span>`)
+    .map(
+      (type) =>
+        `<span class="type" style="background:${
+          typeColors[type.type.name.toLocaleLowerCase()]
+        };">${type.type.name}</span>`
+    )
     .join("");
 };
 
@@ -27,7 +32,14 @@ const renderStatistics = (stats) => {
 };
 
 const renderListItems = (items) => {
-  return items.map((item) => `<li><span>${item}</span></li>`).join("");
+  return items
+    .map(
+      (item) =>
+        `<li style="background:${
+          typeColors[item.toLocaleLowerCase()]
+        };"><span >${item}</span></li>`
+    )
+    .join("");
 };
 
 const renderEvolutionList = (evolution) => {
